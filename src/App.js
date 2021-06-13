@@ -1,22 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./index.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>To Do List</h2>
+        <form>
+          <input
+            placeholder="Enter a ToDo"
+            style={{
+              width: 350,
+              padding: 10,
+              borderRadius: 20,
+              border: "none",
+              fontStyle: 20,
+            }}
+          />
+          <button
+            type="submit"
+            style={{
+              padding: 12,
+              borderRadius: 25,
+              fontSize: 15,
+              marginLeft: 20,
+            }}
+          >
+            Go
+          </button>
+        </form>
+        <ul className="allToDos">
+          <li className="singleToDo">
+            <span className="todoText">First ToDo</span>
+            <button
+              style={{
+                borderRadius: 25,
+                padding: 10,
+                border: "1px solid white",
+                color: "black",
+                backgroundColor: "orangered",
+              }}
+            >
+              Delete
+            </button>
+          </li>
+        </ul>
       </header>
     </div>
   );
